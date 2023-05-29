@@ -4,14 +4,12 @@
 ![Jquery](https://img.shields.io/badge/jquery-3.5.1-orange)
 ![Ajax](https://img.shields.io/badge/jquery-ajax-red)
 # PHP ajax sweetalert2 Log in
-Log in with ajax and sweetalert2.
+Log in with ajax and sweetAlert2.
 
 # Database 
 * sweetLogin.sql
 
-There is the schema for the table.
-
-<code>
+```sql
     CREATE DATABASE sweetLogin;
 
     USE `sweetLogin`;
@@ -27,7 +25,15 @@ There is the schema for the table.
 
     insert  into `users`(`id`,`email`,`pass`) values 
     (1,'demoz@demologin.com','@demologin');
-</code>
+```
+
+## Config parameter
+
+In loginController.php, you may changed the if statement for <b>password_verify()</b>, remember, function requires the first argument to be a plain text password + hashed password from DB. In this example we don't use hashed passwords and a simple DB for practice purposes.
+
+```php
+    password_verify($_POST["pass"], $hashed_password_from_database)
+```
 
 ## Libraries included
 * Bootstrap v4

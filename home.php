@@ -2,8 +2,7 @@
     session_start();
     $mail = $_SESSION["email"];
 
-    if(!isset($_SESSION["email"]))
-    { 
+    if(!isset($_SESSION["email"])){ 
         print "<meta http-equiv='refresh' content='0;url=index.php'>";
         exit;
     } 
@@ -36,30 +35,28 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto">
-                        <li class="nav-item mx-0 mx-lg-1"><a class="btn btn-primary btn-lg" href="logout.php">Logout</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="btn btn-primary btn-lg" href="./logout.php">Logout</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
 
-        <span id="forkongithub"><a href="https://github.com/adhirsaurio/cawfy-template">Fork me on GitHub</a></span>
+        <span id="forkongithub"><a href="https://github.com/adhirsaurio/php-ajax-sweetalert2-login">Fork me on GitHub</a></span>
         
         <section class="page-section">
             <div class="container text-center">
-                
                 <div class="divider-custom">
                     <div class="divider-custom-line"></div>
                     <div class="divider-custom-icon"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
                     <div class="divider-custom-line"></div>
                 </div>
                 <h2 class="page-section-heading text-center text-uppercase text-secondary mb-5">Success</h2>
-                <p class="lead mb-0"> Welcome  <strong>@<?php echo  $mail; ?></strong> </p>
-                
+                <p class="lead mb-0"> Welcome  <strong><?php echo  $mail; ?></strong> </p>
             </div>
         </section>
 
         <div class="copyright py-4 text-center text-white mt-auto">
-            <div class="container"><small>PHP ajax sweetalert2 login © 2022</small> <a href="https://github.com/adhirsaurio?tab=repositories"><i class="fab fa-github-alt"></i></a></div>
+            <div class="container"><small>PHP ajax sweetalert2 login © 2023</small> <a href="https://github.com/adhirsaurio/php-ajax-sweetalert2-login"><i class="fab fa-github-alt"></i></a></div>
         </div>
     </body>
 </html>

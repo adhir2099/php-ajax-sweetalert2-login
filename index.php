@@ -14,7 +14,7 @@
     </head>  
 
     <body class="d-flex flex-column min-vh-100">  
-        <span id="forkongithub"><a href="https://github.com/adhirsaurio/cawfy-template">Fork me on GitHub</a></span> 
+        <span id="forkongithub"><a href="https://github.com/adhirsaurio/php-ajax-sweetalert2-login">Fork me on GitHub</a></span> 
         
         <div class="container mb-5">  
             
@@ -59,7 +59,7 @@
         </div>
         
         <div class="copyright py-4 text-center text-white mt-auto">
-            <div class="container"><small>PHP ajax sweetalert2 login © 2022</small> <a href="https://github.com/adhirsaurio?tab=repositories"><i class="fab fa-github-alt"></i></a></div>
+            <div class="container"><small>PHP ajax sweetalert2 login © 2023</small> <a href="https://github.com/adhirsaurio/php-ajax-sweetalert2-login"><i class="fab fa-github-alt"></i></a></div>
         </div>
     
     </body>  
@@ -92,7 +92,7 @@
                 $("#loading_spinner").css({"display":"block"});
                 $.ajax({
                 method:'POST',
-                url:'login.php',
+                url:'loginController.php',
                 data:{do_login:"do_login",email:email,pass:pass},
                 success:function(response) {
                     if(response=="success"){
