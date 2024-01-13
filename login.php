@@ -4,7 +4,8 @@
 
 	if(isset($_POST['do_login'])){
 
-		$statement = $connect->prepare("SELECT * FROM users WHERE email = ?"); 
+		$query = "SELECT * FROM users WHERE email = ?";
+		$statement = $connect->prepare($query); 
 		$statement->execute([$_POST['email']]);
 		$result = $statement->fetchAll();
 		
@@ -15,4 +16,3 @@
 			echo "fail";
 		}
 	}
-?>

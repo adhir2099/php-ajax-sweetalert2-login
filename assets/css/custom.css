@@ -1,0 +1,80 @@
+.glass{
+    background: rgba( 255, 255, 255, 0.4 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+  }
+  
+  #loading_spinner{
+   display:none;
+  }
+  
+  /* Ribbon */
+  #forkongithub a{
+    background:#000;
+    color:#fff;
+    text-decoration:none;
+    font-family:arial,sans-serif;
+    text-align:center;
+    font-weight:bold;
+    padding:5px 40px;
+    font-size:1rem;
+    line-height:2rem;
+    position:relative;
+    transition:0.5s;
+  }
+  
+  #forkongithub a:hover{
+    background:#c11;
+    color:#fff;
+  }
+  
+  #forkongithub a::before,#forkongithub a::after{
+    content:"";
+    width:100%;
+    display:block;
+    position:absolute;
+    top:1px;
+    left:0;
+    height:1px;
+    background:#fff;
+  }
+  
+  #forkongithub a::after{
+    bottom:1px;
+    top:auto;
+  }
+  
+  @media (min-width:280px) and (max-width:799px){
+    #forkongithub{
+      display: none;
+    }
+  }
+  
+  @media screen and (min-width:800px){
+    #forkongithub{
+        position:fixed;
+        display:block;
+        top:0;
+        right:0;
+        width:200px;
+        overflow:hidden;
+        height:200px;
+        z-index:9999;
+    }
+    
+    #forkongithub a{
+        width:200px;
+        position:absolute;
+        top:9px;
+        right:-54px;
+        transform:rotate(45deg);
+        -webkit-transform:rotate(45deg);
+        -ms-transform:rotate(45deg);
+        -moz-transform:rotate(45deg);
+        -o-transform:rotate(45deg);
+        box-shadow:4px 4px 10px rgba(0,0,0,0.8);
+    }
+  }

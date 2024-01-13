@@ -1,18 +1,31 @@
 ![PHP](https://img.shields.io/badge/php-8-brightgreen)
 ![Responsive](https://img.shields.io/badge/Responsive-Yes-ff69b4)
-![Bootstrap](https://img.shields.io/badge/bootstrap-4.5-blue)
-![Jquery](https://img.shields.io/badge/jquery-3.5.1-orange)
+![Bootstrap](https://img.shields.io/badge/bootstrap-5-blue)
 ![Ajax](https://img.shields.io/badge/jquery-ajax-red)
+
 # PHP ajax sweetalert2 Log in
-Log in with ajax and sweetAlert2.
+Log in with ajax and sweetAlert2, no jquery needed. For alerts we're using SweetAlert 2.
+
+## Backend
+<p align="left">
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=php,mysql" />
+  </a>
+</p>
+
+## Frontend
+<p align="left">
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=javascript,bootstrap,css" />
+  </a>
+</p>
 
 # Database 
-* sweetLogin.sql
 
 ```sql
-    CREATE DATABASE sweetLogin;
+    CREATE DATABASE login;
 
-    USE `sweetLogin`;
+    USE `login`;
 
     DROP TABLE IF EXISTS `users`;
 
@@ -29,16 +42,15 @@ Log in with ajax and sweetAlert2.
 
 ## Config parameter
 
-In loginController.php, you may changed the if statement for <b>password_verify()</b>, remember, function requires the first argument to be a plain text password + hashed password from DB. In this example we don't use hashed passwords and a simple DB for practice purposes.
+In <b>loginController.php</b> , you may changed the if statement for <b>password_verify()</b>, remember, function requires the first argument to be a plain text password + hashed password from DB. In this example we don't use hashed passwords and uses a simple DB for practice purposes.
 
 ```php
     password_verify($_POST["pass"], $hashed_password_from_database)
 ```
 
 ## Libraries included
-* Bootstrap v4
+* Bootstrap v5.3
 * FontAwesome 5.15
-* Jquery v3.5.1
 * Sweetalert2
 
 ## Contributing
@@ -49,8 +61,8 @@ In loginController.php, you may changed the if statement for <b>password_verify(
 4. Push to the branch: `git push origin your-branch`
 5. Submit a PR
 
-## Creator
-* <a href="https://github.com/adhirsaurio">Yomerengues</a>
-
-## Maintenance
-![Maintenance](https://img.shields.io/badge/Maintenance-Yes-brightgreen)
+<h3 align="left">Get in touch with me:</h3>
+<p align="left">
+<a href="https://www.linkedin.com/in/adhir-serrano/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="adhir2099" height="30" width="40" /></a>
+</p>
+<p align="right" > Created with ❤️ by <a href="https://github.com/adhir2099">Adhir2099</a></p>
