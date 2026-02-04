@@ -1,7 +1,6 @@
 ![PHP](https://img.shields.io/badge/php-8-brightgreen)
 ![Responsive](https://img.shields.io/badge/Responsive-Yes-ff69b4)
 ![Bootstrap](https://img.shields.io/badge/bootstrap-5-blue)
-![Ajax](https://img.shields.io/badge/jquery-ajax-red)
 
 # PHP ajax sweetalert2 Log in
 Log in with ajax and sweetAlert2, no jquery needed. For alerts we're using SweetAlert 2.
