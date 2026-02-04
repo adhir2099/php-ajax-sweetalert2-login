@@ -44,83 +44,8 @@
         </section>
         
         <div class="py-3 text-end text-black mt-auto">
-            <div class="container"><small>PHP ajax sweetalert2 login © 2023 </small> <a href="https://github.com/adhir2099/php-ajax-sweetalert2-login"><i class="fab fa-github-alt"></i></a></div>
+            <div class="container"><small>PHP ajax sweetalert2 login © 2026 </small> <a href="https://github.com/adhir2099/php-ajax-sweetalert2-login"><i class="fab fa-github-alt"></i></a></div>
         </div>
-    
+        <script src="assets/js/scripts.js"></script>
     </body>  
 </html> 
-
-<script>
-    document.getElementById("loginForm").addEventListener("submit", function(e) {
-
-        e.preventDefault();
-
-        const email = document.getElementById("email").value;
-        const pass  = document.getElementById("pass").value;
-
-        if (email === "" || pass === "") {
-            Swal.fire({
-                        toast: true,
-                        icon: 'warning',
-                        title: 'All fields are required',
-                        position: 'top',
-                        showConfirmButton: false,
-                        timer: 3000,
-                        timerProgressBar: true,
-                        didOpen: (toast) => {
-                            toast.addEventListener('mouseenter', Swal.stopTimer)
-                            toast.addEventListener('mouseleave', Swal.resumeTimer)
-                        }
-                    })
-        } else {
-            const loadingSpinner = document.getElementById("loading_spinner");
-            loadingSpinner.style.display = "block";
-
-            const xhr = new XMLHttpRequest();
-            xhr.open("POST", "loginController.php");
-            xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-            xhr.onload = function() {
-                if (xhr.status === 200) {
-                if (xhr.responseText === "success") {
-                    window.location.href = "home.php";
-                } else {
-                    loadingSpinner.style.display = "none";
-                    Swal.fire({
-                                toast: true,
-                                icon: 'error',
-                                title: 'Wrong User/email or password',
-                                position: 'top',
-                                showConfirmButton: false,
-                                timer: 3000,
-                                timerProgressBar: true,
-                                didOpen: (toast) => {
-                                    toast.addEventListener('mouseenter', Swal.stopTimer)
-                                    toast.addEventListener('mouseleave', Swal.resumeTimer)
-                                }
-                            })
-                }
-                } else {
-                    console.error("Error sending request:", xhr.statusText);
-                }
-            };
-            xhr.onerror = function() {
-                console.error("Network error occurred");
-                Swal.fire({
-                        toast: true,
-                        icon: 'danger',
-                        title: 'Network error occurred',
-                        position: 'top',
-                        showConfirmButton: false,
-                        timer: 3000,
-                        timerProgressBar: true,
-                        didOpen: (toast) => {
-                            toast.addEventListener('mouseenter', Swal.stopTimer)
-                            toast.addEventListener('mouseleave', Swal.resumeTimer)
-                        }
-                    })
-            };
-            xhr.send("do_login=do_login&email=" + email + "&pass=" + pass);
-        }
-    });
-
-</script>

@@ -43,7 +43,7 @@
         </section>
 
         <div class="py-3 text-end text-black mt-auto">
-            <div class="container"><small>PHP ajax sweetalert2 login © 2023 </small> <a href="https://github.com/adhir2099/php-ajax-sweetalert2-login"><i class="fab fa-github-alt"></i></a></div>
+            <div class="container"><small>PHP ajax sweetalert2 login © 2026 </small> <a href="https://github.com/adhir2099/php-ajax-sweetalert2-login"><i class="fab fa-github-alt"></i></a></div>
         </div>
     </body>
 </html>
